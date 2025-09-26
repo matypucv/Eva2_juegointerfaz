@@ -11,6 +11,7 @@ public class Comparador_manager : MonoBehaviour
     public UnityEvent ACERTO;
     public UnityEvent FALLO;
     public List <carta> carta_al_comparador;
+    public float animationtime;
     [SerializeField] private Gamemanager gamemanager;
     int limite = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -75,7 +76,8 @@ public class Comparador_manager : MonoBehaviour
             else if (carta_B == null)
             {
                 carta_B = Card_value;
-                comparar_cartas();
+                carta_B.interactuable(false);
+                Invoke("comparar_cartas",animationtime);
                 carta_al_comparador.Clear(); 
             }
 

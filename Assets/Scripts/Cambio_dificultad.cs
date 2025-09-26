@@ -12,7 +12,7 @@ public class Cambio_dificultad : MonoBehaviour
     void Start()
     {
 
-        //opciones.onValueChanged.AddListener(cambiar_dificultad);
+        
     }
 
     // Update is called once per frame

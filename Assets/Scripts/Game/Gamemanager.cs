@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,7 +7,7 @@ using UnityEngine.Events;
 public class Gamemanager : MonoBehaviour
 {
     public enum dificultad { FACIL, NORMAL, DIFICL}
-
+    public TextMeshProUGUI text_intentos;
     public int intentos = 3;
     public dificultad ajuste_dificultad;
     public GameObject panel_gameplay_facil;
@@ -17,9 +18,11 @@ public class Gamemanager : MonoBehaviour
     carta[] cartas_en_game;
     int cantidad_cartas;
     int cartas_restante;
+    int intent_default;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        intent_default = intentos;
         empezar_juego();
     }
 
@@ -31,6 +34,7 @@ public class Gamemanager : MonoBehaviour
 
     public void empezar_juego()
     {
+        //text_intentos.text = "Intento: "+intentos;
         if (ajuste_dificultad == dificultad.FACIL)
         {
             cartas_en_game = panel_gameplay_facil.GetComponentsInChildren<carta>();
@@ -98,5 +102,10 @@ public class Gamemanager : MonoBehaviour
         {
             carta.interactuable(false);
         }
+    }
+    public void resetear()
+    {
+        intentos = intent_default;
+        empezar_juego();
     }
 }

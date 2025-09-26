@@ -10,14 +10,7 @@ public class Gridmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        foreach (var grillas in grilla)
-        {
-            botones = grillas.GetComponentsInChildren<Button>();
-            if (activar == true)
-            {
-               cambiarorden();
-            }
-        }
+        obtener_grllas();
     }
 
     // Update is called once per frame
@@ -26,7 +19,17 @@ public class Gridmanager : MonoBehaviour
         
     }
 
-
+    public void obtener_grllas()
+    {
+        foreach (var grillas in grilla)
+        {
+            botones = grillas.GetComponentsInChildren<Button>();
+            if (activar == true)
+            {
+                cambiarorden();
+            }
+        }
+    }
     public void cambiarorden()
     {
         foreach (var boton in botones)

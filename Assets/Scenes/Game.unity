@@ -302,11 +302,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5408925cf3f1a4898106804b4ae894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text_intentos: {fileID: 0}
   intentos: 5
   ajuste_dificultad: 0
   panel_gameplay_facil: {fileID: 374132631}
   panel_gameplay_normal: {fileID: 49423171}
-  panel_gameplay_dificil: {fileID: 0}
+  panel_gameplay_dificil: {fileID: 257587849}
   GANASTE:
     m_PersistentCalls:
       m_Calls:
@@ -4395,6 +4396,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   carta_al_comparador: []
+  animationtime: 0.6
   gamemanager: {fileID: 71473506}
 --- !u!4 &860642363
 Transform:
@@ -9689,6 +9691,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1587081135}
         m_TargetAssemblyTypeName: Cambio_dificultad, Assembly-CSharp
         m_MethodName: change_dificultad
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 71473506}
+        m_TargetAssemblyTypeName: Gamemanager, Assembly-CSharp
+        m_MethodName: resetear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1468873595}
+        m_TargetAssemblyTypeName: Gridmanager, Assembly-CSharp
+        m_MethodName: obtener_grllas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
